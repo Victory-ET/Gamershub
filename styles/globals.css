@@ -1,9 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+    font-family: montserrat;
 }
 
 a {
@@ -13,4 +18,64 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.imag{
+  background-image: url(../public/controller.png);
+  height: 450px;
+  width: 450px;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+
+
+.imag2{
+  background-image: url(../public/game.png);
+  height: 450px;
+  width: 450px;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+
+.effect{
+  position: relative;
+}
+
+.effect::before{
+  @apply animate-ping rounded-lg animate-bounce flex items-center justify-center text-white font-medium text-2xl;
+  content: 'X';
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  z-index: -1;
+  background-color: blueviolet;
+  height: 50px;
+  width: 50px;
+  transform: rotate(60deg);
+  font-family: monospace;
+}
+.effect::after{
+  @apply animate-bounce rounded-xl flex items-center justify-center text-white font-medium text-4xl;
+  content:'O';
+  position: absolute;
+  bottom: -10px;
+  right: 20%;
+  z-index: -1;
+  background-color: blueviolet;
+  height: 170px;
+  width: 170px;
+  transform: rotate(60deg);
+}
+
+@media screen and (max-width: 1283px) {
+  .effect::after, .effect::before{
+    display: none;
+  }
+
+  .imag{
+    height: 350px;
+    width: 350px;
+  }
 }
