@@ -12,7 +12,7 @@ function Nav() {
       <nav className=" shadow-lg fixed w-full z-10 backdrop-blur-md">
         <span className="w-full">
           <div className="flex items-center h-20 w-full">
-            <div className="flex items-center items mx-20 justify-between w-full">
+            <div className="flex items-center items mx-20 justify-between w-full flex-row-reverse">
               <span className="flex items-center justify-center flex-shrink-0">
                 <h1 className=" font-bold cursor-pointer text-xl">
                   Gamers<span className=" text-purple-800">hub</span>
