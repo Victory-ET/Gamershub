@@ -2,7 +2,7 @@ import React from "react";
 
 function Landing() {
   return (
-    <div className=" h-screen">
+    <div className=" h-screen bg-white dark:bg-slate-800 dark:text-white ">
       <div className=" relative" id="Home">
         <div className=" relative w-full h-full top-36 flex justify-center items-center flex-col sm:flex-row">
           <span className=" px-6 md:w-3/6 sm:w-screen">
